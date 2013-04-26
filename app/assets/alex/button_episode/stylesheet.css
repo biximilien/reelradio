@@ -1,0 +1,63 @@
+*{
+	/* outline: 1px double #ff00ff; */
+}
+
+body{
+	width: 480px;
+	margin: 6em auto;
+	text-align: center;
+	background-image: url(../pictures/background.png);
+}
+
+input[type="button"]{
+	position: relative;
+	width: 300px;
+	height: 60px;
+	text-align: center;
+	font-family: 'Avenir';
+	background: #ffffff;
+	border: none;
+	border-radius: 4px;
+	box-shadow:2px 6px 14px rgba(33,33,33,0.4);
+	font-size: 1.5em;
+	color: #a3a3a3;
+}
+
+input[type="button"] :focus{
+	position: relative;
+	width: 300px;
+	height: 60px;
+	text-align: center;
+	font-family: 'Avenir';
+	background: #ffffff;
+	border: none;
+	border-radius: 4px;
+	font-size: 1.5em;
+	color: #a3a3a3;
+}
+
+
+
+/* --------------------------------------------------------- 
+					typo
+-----------------------------------------------------------*/
+
+@font-face {
+	font-family: 'Avenir';
+	src: url('typo/avenir/AvenirRoman.eot');
+	src: url('typo/avenir/AvenirRoman.eot?#iefix') format('embedded-opentype'), 
+		 url('typo/avenir/AvenirRoman.woff') format('woff'), 
+		 url('typo/avenir/AvenirRoman.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Avenirbd';
+	src: url('typo/avenir/AvenirBlack.eot');
+	src: url('typo/avenir/AvenirBlack.eot?#iefix') format('embedded-opentype'), 
+		 url('typo/avenir/AvenirBlack.woff') format('woff'), 
+		 url('typo/avenir/AvenirBlack.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
