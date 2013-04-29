@@ -17,6 +17,9 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'rspec-rails', "~> 2.0"
-  gem 'guard'
+end
+
+group :test do
+  gem 'capybara'
   gem 'guard-rspec'
 end
