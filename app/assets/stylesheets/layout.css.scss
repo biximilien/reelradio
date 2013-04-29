@@ -1,0 +1,82 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// Colors
+$background-color: #333;
+$header-background-color: #000;
+$footer-background-color: #000;
+$player-background-color: #fff;
+
+// Dimensions
+$width: 100%;
+$header-height: 75px;
+$footer-height: 75px;
+$player-height: 60px;
+
+body {
+  background: { 
+    color: $background-color;
+    image: url('background.png');
+    repeat: repeat-y;
+  } 
+  margin: 0px;
+  padding: 0px;
+  width: $width;
+  height: 800px;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.above {
+  z-index: 100000;
+}
+
+header {
+  background-color: $header-background-color;
+  height: $header-height;
+  width: $width;
+  top: 0px;
+  left: 0px;
+}
+
+footer {
+  background-color: $footer-background-color;
+  height: $footer-height;
+  width: $width;
+  bottom: 0px;
+  left: 0px;
+}
+
+#logo {
+  width: 100%;
+  height: $header-height;
+}
+
+#player {
+  background-color: $player-background-color;
+  width: 100%;
+  height: $player-height;
+}
+
+#home {
+  height: 100%;
+  background: url('home.png') center center no-repeat;
+}
+
+#playlist {
+  height: 100%;
+  background: url('playlist.png') center center no-repeat;
+}
+
+.right {
+ float: left;
+ width: 50%;
+}
+
+.left {
+  float: right;
+  width: 50%;
+}

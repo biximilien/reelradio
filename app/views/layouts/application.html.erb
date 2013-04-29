@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Reelradio</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title><%= yield(:title) %></title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <header id="header" class="fixed above" >
+      <div id="logo" class="top" ></div>
+      <div id="player" class="bottom"></div>
+    </header>
+    <section id="body" ><%= yield %><section>
+    <footer id="footer" class="fixed above" >
+      <div id="home" class="left"><%= link_to '', '/' %></div>
+      <div id="playlist" class="right"><%= link_to '', '/' %></div>
+    </footer>
+  </body>
 </html>
