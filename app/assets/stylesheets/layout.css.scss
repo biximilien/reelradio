@@ -3,10 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // Colors
-$background-color: #333;
-$header-background-color: #000;
-$footer-background-color: #000;
+$background-color: #fff;
+$header-background-color: #2c2c2c;
+$footer-background-color: #2c2c2c;
 $player-background-color: #fff;
+
+$foreground: #272727;
+$live-color: #464646;
+$logo-color1: #f2c536;
+$logo-color2: #f7f6f4;
 
 // Dimensions
 $width: 100%;
@@ -59,21 +64,39 @@ header {
 }
 
 #live {
+  float: left;
   width: $width / 3;
   height: 100%;
-  text-align: center;
+  color: $live-color;
+  text: {
+    align: center;
+    decoration: none;
+  }
 }
 
 #logo {
+  float: left;
   width: $width / 3;
   height: 100%;
-  text-align: center;
+  text: {
+    align: center;
+    decoration: none;
+  }
+}
+
+#logo-text-left {
+  color: $logo-color1;
+}
+
+#logo-text-right {
+  color: $logo-color2;
 }
 
 #refresh {
+  float: right;
   width: $width / 3;
   height: 100%;
-  background-image: $refresh-image center center no-repeat;
+  background: $refresh-image center center no-repeat;
 }
 
 #player {
@@ -91,6 +114,7 @@ footer {
 }
 
 #home {
+  float: left;
   width: $width / 2;
   height: 100%;
   background: $home-image center center no-repeat;
@@ -100,6 +124,7 @@ footer {
 }
 
 #playlist {
+  float: right;
   width: $width / 2;
   height: 100%;
   background: $playlist-image center center no-repeat;
@@ -108,19 +133,12 @@ footer {
   }
 }
 
-.right {
- float: right;
+.fixed {
+  position: fixed;
 }
 
-.left {
-  float: left;
-}
-
-.middle {
-  margin: {
-    left: auto;
-    right: auto;
-  }
+.above {
+  z-index: 100000;
 }
 
 .centered {
@@ -135,12 +153,4 @@ footer {
   display: box;
   box-orient: vertical;
   box-pack: center;
-}
-
-.fixed {
-  position: fixed;
-}
-
-.above {
-  z-index: 100000;
 }

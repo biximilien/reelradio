@@ -9,9 +9,11 @@
   <body>
     <header id="header" class="fixed above" >
     <div id="logo-container" class="top" >
-      <%= link_to "#{live?}", '/', :id => 'live', :class => 'left centered' %>
-      <%= link_to 'REEL-RADIO.fm', '/', :id => 'logo', :class => 'middle centered' %>
-      <%= link_to '', '/', :id => 'refresh', :class => 'right' %>
+      <%= link_to "LIVE", "#", :id => "live", :class => "left centered" %>
+      <%= link_to "/", :id => "logo", :class => "middle centered" do %>
+        <span id="logo-text-left">REEL</span><span id="logo-text-right">RADIO.fm</span>
+      <% end %>
+      <%= link_to '', '#', :id => 'refresh', :class => 'right' %>
     </div>
       <div id="player" class="bottom"></div>
     </header>
