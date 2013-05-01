@@ -8,13 +8,19 @@
   </head>
   <body>
     <header id="header" class="fixed above" >
-      <div id="logo" class="top" ></div>
+    <div id="logo-container" class="top" >
+      <%= link_to "#{live?}", '/', :id => 'live', :class => 'left centered' %>
+      <%= link_to 'REEL-RADIO.fm', '/', :id => 'logo', :class => 'middle centered' %>
+      <%= link_to '', '/', :id => 'refresh', :class => 'right' %>
+    </div>
       <div id="player" class="bottom"></div>
     </header>
-    <section id="body" ><%= yield %><section>
+    <section id="body" >
+      <%= yield %>
+    </section>
     <footer id="footer" class="fixed above" >
-      <div id="home" class="left"><%= link_to '', '/' %></div>
-      <div id="playlist" class="right"><%= link_to '', '/' %></div>
+      <%= link_to '', '/', :id => 'home', :class => 'left' %>
+      <%= link_to '', '/', :id => 'playlist', :class => 'right' %>
     </footer>
   </body>
 </html>

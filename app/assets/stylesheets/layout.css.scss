@@ -21,6 +21,7 @@ $home-image: url('home.png');
 $home-image-active: url('home_active.png');
 $playlist-image: url('playlist.png');
 $playlist-image-active: url('playlist_active.png');
+$refresh-image: url('refresh.png');
 
 body {
   background: { 
@@ -44,20 +45,41 @@ body {
   }
 }
 
-.fixed {
-  position: fixed;
-}
-
-.above {
-  z-index: 100000;
-}
-
 header {
   background-color: $header-background-color;
   height: $header-height;
   width: $width;
   top: 0px;
   left: 0px;
+}
+
+#logo-container {
+  width: 100%;
+  height: $header-height;
+}
+
+#live {
+  width: $width / 3;
+  height: 100%;
+  text-align: center;
+}
+
+#logo {
+  width: $width / 3;
+  height: 100%;
+  text-align: center;
+}
+
+#refresh {
+  width: $width / 3;
+  height: 100%;
+  background-image: $refresh-image center center no-repeat;
+}
+
+#player {
+  background-color: $player-background-color;
+  width: 100%;
+  height: $player-height;
 }
 
 footer {
@@ -68,18 +90,8 @@ footer {
   left: 0px;
 }
 
-#logo {
-  width: 100%;
-  height: $header-height;
-}
-
-#player {
-  background-color: $player-background-color;
-  width: 100%;
-  height: $player-height;
-}
-
 #home {
+  width: $width / 2;
   height: 100%;
   background: $home-image center center no-repeat;
   &:hover {
@@ -88,6 +100,7 @@ footer {
 }
 
 #playlist {
+  width: $width / 2;
   height: 100%;
   background: $playlist-image center center no-repeat;
   &:hover {
@@ -97,10 +110,37 @@ footer {
 
 .right {
  float: right;
- width: 50%;
 }
 
 .left {
   float: left;
-  width: 50%;
+}
+
+.middle {
+  margin: {
+    left: auto;
+    right: auto;
+  }
+}
+
+.centered {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-pack: center;
+
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-pack: center;
+
+  display: box;
+  box-orient: vertical;
+  box-pack: center;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.above {
+  z-index: 100000;
 }
