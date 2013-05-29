@@ -1,3 +1,6 @@
+require 'rss'
+require 'open-uri'
+
 class FeedEntry < ActiveRecord::Base
   
   attr_accessible :guid, :name, :published_at, :summary, :url
@@ -18,8 +21,6 @@ class FeedEntry < ActiveRecord::Base
   end
 
   def self.update_from_feed(url)
-    require 'rss'
-    require 'open-uri'
     open(url) do |rss|
       feed = RSS::Parser.parse(rss)
       puts "Title: #{feed.channel.title}"
