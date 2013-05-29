@@ -28,12 +28,38 @@ $playlist-image: url('playlist.png');
 $playlist-image-active: url('playlist_active.png');
 $refresh-image: url('refresh.png');
 
+@font-face {
+  font-family: 'AvenirBlack';
+  src: url('type/AvenirBlack.woff') format('woff'),
+  url('type/AvenirBlack.eot') format('eot'),
+  url('type/AvenirBlack.ttf') format('ttf');
+}
+
+@font-face {
+  font-family: 'AvenirRoman';
+  src: url('type/AvenirRoman.woff') format('woff'),
+  url('type/AvenirRoman.eot') format('eot'),
+  url('type/AvenirRoman.ttf') format('ttf'),
+  url('type/AvenirRoman.svg') format('svg');
+}
+
+h1 {
+  color: #f2c536;
+  font-family: 'AvenirBlack';
+}
+
+p {
+  color: #272727;
+  font-family: 'AvenirRoman';
+}
+
 body {
   background: { 
     color: $background-color;
     image: $background;
     repeat: repeat-x repeat-y;
-  } 
+  }
+
   margin: 0px;
   padding: 0px;
   width: $width;
@@ -44,6 +70,7 @@ body {
     top: $header-height + $player-height;
     bottom: $footer-height;
   }
+
   margin: {
     left: $body-margin;
     right: $body-margin;
