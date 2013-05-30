@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130515163001) do
+ActiveRecord::Schema.define(:version => 20130529161153) do
 
   create_table "broadcasts", :force => true do |t|
     t.string   "title"
@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20130515163001) do
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "image_url"
   end
 
 end

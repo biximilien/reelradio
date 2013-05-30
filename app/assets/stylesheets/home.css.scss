@@ -1,3 +1,20 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$image_width: 340px;
+
+.news-container {
+  display: block;
+  text-decoration: none;
+
+  h1, p {
+    margin-left: $image_width + 12px;
+  }
+
+  img {
+    float: left;
+  }
+
+  clear: both;
+}
