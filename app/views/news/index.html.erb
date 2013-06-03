@@ -1,0 +1,9 @@
+<% title "RÉÉL-Radio.fm :: Nouvelles" %>
+<% @news.each do |news| %>
+  <%= link_to( news, class: "news-container" ) do %>
+    <%= image_tag news.image_url %>
+    <h1><%= news.title %></h1>
+    <p><%= truncate(news.content, length: 240, separator: ' ') %></p>
+  <% end %>
+  <br /><br /><br />
+<% end %>

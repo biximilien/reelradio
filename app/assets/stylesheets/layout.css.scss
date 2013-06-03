@@ -65,7 +65,7 @@ body {
   width: $width;
 }
 
-#body {
+.body-container {
   padding: {
     top: $header-height + $player-height;
     bottom: $footer-height;
@@ -77,7 +77,7 @@ body {
   }
 }
 
-header {
+.header-container {
   background-color: $header-background-color;
   height: $header-height;
   width: $width;
@@ -85,12 +85,12 @@ header {
   left: 0px;
 }
 
-#logo-container {
+.logo-container {
   width: 100%;
   height: $header-height;
 }
 
-#live {
+.live {
   float: left;
   width: $width / 3;
   height: 100%;
@@ -101,7 +101,7 @@ header {
   }
 }
 
-#logo {
+.logo {
   float: left;
   width: $width / 3;
   height: 100%;
@@ -111,11 +111,11 @@ header {
   }
 }
 
-#logo-text-left {
+.logo-text-left {
   color: $logo-color1;
 }
 
-#logo-text-right {
+.logo-text-right {
   color: $logo-color2;
 }
 
@@ -132,7 +132,7 @@ header {
   height: $player-height;
 }
 
-footer {
+.footer-container {
   background-color: $footer-background-color;
   height: $footer-height;
   width: $width;

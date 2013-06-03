@@ -1,0 +1,7 @@
+<% title "RÉÉL-RADIO.fm :: ÉMISSIONS" %>
+<% @broadcasts.each do |broadcast| %>
+  <%= link_to( '/broadcasts/' << broadcast.id.to_s, class: "broadcast-container" ) do %>
+    <h1><%= broadcast.title %></h1>
+    <p><%= broadcast.content %></p>
+  <% end %>
+<% end %>

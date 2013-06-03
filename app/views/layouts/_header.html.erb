@@ -1,11 +1,11 @@
 <header class="header-container fixed above" >
 
   <div class="logo-container top" >
-    <%= link_to "LIVE", "#", class: "live left centered" %>
-    <%= link_to "/", class: "logo middle centered" do %>
+    <%= link_to 'LIVE', 'javascript:;', class: 'live left centered' %>
+    <%= link_to '/', class: "logo middle centered" do %>
       <span class="logo-text-left">REEL</span><span class="logo-text-right">RADIO.fm</span>
     <% end %>
-    <%= link_to '', '#', :id => 'refresh', :class => 'right' %>
+    <%= link_to '', 'javascript:history.go(0);', id: 'refresh', class: 'right' %>
   </div>
 
   <div id="player-container" class="bottom">

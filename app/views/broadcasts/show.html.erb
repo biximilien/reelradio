@@ -1,0 +1,11 @@
+<% title "RÉÉL-RADIO.fm :: " << @broadcast.title %>
+
+<h1><%= @broadcast.title %></h1>
+
+<p><%= @broadcast.content %></p>
+
+<% @broadcast.episodes.each do |episode| %>
+	
+  <%= link_to episode.title, @broadcast.id.to_s << '/episodes/' << episode.id.to_s %>
+
+<% end %>
