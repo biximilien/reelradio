@@ -5,59 +5,13 @@
     <%= stylesheet_link_tag    "application", :media => "all" %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
-    <script type="text/javascript">	
-      $(document).ready(function(){
-        $("#jquery_reelplayer").jPlayer({
-          ready: function (event) {
-            $(this).jPlayer("setMedia", {
-              m4a:"http://www.jplayer.org/audio/m4a/TSP-01-Cro_magnon_man.m4a",
-              oga:"http://www.jplayer.org/audio/ogg/TSP-01-Cro_magnon_man.ogg"
-            }).jPlayer("play");
-          },
-          swfPath: "js",
-          supplied: "m4a, oga",
-          wmode: "window"
-        });
-      });
-    </script>
+    <%= render 'layouts/reelplayer' %>
   </head>
   <body>
-    <header id="header" class="fixed above" >
-      <div id="logo-container" class="top" >
-        <%= link_to "LIVE", "#", :id => "live", :class => "left centered" %>
-        <%= link_to "/", :id => "logo", :class => "middle centered" do %>
-          <span id="logo-text-left">REEL</span><span id="logo-text-right">RADIO.fm</span>
-        <% end %>
-        <%= link_to '', '#', :id => 'refresh', :class => 'right' %>
-      </div>
-      <div id="player-container" class="bottom">
-        <div id="jquery_reelplayer" class="jp-jplayer"></div>
-        <div id="jp_container_1" class="jp-audio">
-          <div class="jp-type-single">
-            <div class="jp-gui jp-interface">
-              <ul class="jp-controls">
-                <li><a href="javascript:;" class="jp-play" tabindex="1">play</a></li>
-                <li><a href="javascript:;" class="jp-pause" tabindex="1">pause</a></li>
-                <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>
-                <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>
-              </ul>
-              <div class="jp-progress"><div class="jp-seek-bar"><div class="jp-play-bar"></div></div></div>
-              <div class="jp-volume-bar"><div class="jp-volume-bar-value"></div></div>
-            </div>
-            <div class="jp-no-solution">
-              <span>Update Required</span>
-              To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
-    <section id="body" >
+    <%= render 'layouts/header' %>
+    <section class="body-container" >
       <%= yield %>
     </section>
-    <footer id="footer" class="fixed above" >
-      <%= link_to '', '/home', :id => 'home', :class => 'left' %>
-      <%= link_to '', '/playlist', :id => 'playlist', :class => 'right' %>
-    </footer>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
