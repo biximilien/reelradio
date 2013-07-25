@@ -3,7 +3,7 @@
   <%= link_to( '/news/' << news.id.to_s, class: "news-container" ) do %>
     <%= image_tag news.image_url %>
     <h1><%= news.title %></h1>
-    <p><%= truncate(news.content, length: 240, separator: ' ') %></p>
+    <p><%= news.truncated_content %></p>
   <% end %>
   <br /><br /><br />
 <% end %>
