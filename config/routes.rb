@@ -1,4 +1,4 @@
-Reelradio::Application.routes.draw do
+Rails.application.routes.draw do
   root to: 'news#index'
   resources :news, only: [:index, :show]
   resources :broadcasts, only: [:index, :show] do

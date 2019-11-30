@@ -1,4 +1,4 @@
-class CreateFeedEntries < ActiveRecord::Migration
+class CreateFeedEntries < ActiveRecord::Migration[4.2]
   def up
     create_table :feed_entries do |t|
       t.string :name

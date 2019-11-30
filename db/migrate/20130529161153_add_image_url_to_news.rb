@@ -1,4 +1,4 @@
-class AddImageUrlToNews < ActiveRecord::Migration
+class AddImageUrlToNews < ActiveRecord::Migration[4.2]
   def up
     add_column :news, :image_url, :string
   end

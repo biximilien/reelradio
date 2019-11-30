@@ -1,4 +1,4 @@
-class AddBroadcastIdToEpisodes < ActiveRecord::Migration
+class AddBroadcastIdToEpisodes < ActiveRecord::Migration[4.2]
   def up
     add_column :episodes, :broadcast_id, :integer
   end
